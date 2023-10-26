@@ -21,7 +21,7 @@ class DefaultController extends Controller
         Zend_Registry::set('dic', $this->container);
 
         $rootDir   = $this->get('kernel')->getRootDir();
-        $bootstrap = $this->container->getParameter('zf1wrapper_bootstrap_path');
+        $bootstrap = $this->container->getParameter('bootstrap_path');
 
         // capture content from legacy application
         ob_start();

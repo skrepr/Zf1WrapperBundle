@@ -21,12 +21,10 @@ Add the following to your composer.json:
 
 ### 1. config.yml ###
 You need to configure is the location of your ZF1 bootstrap file (e.g. index.php).
-Add the following to your config.yml:
+Add the following to your packages/zf1_wrapper.yml:
 ```
-parameters:
-
-    #Zf1WrapperBundle
-    zf1wrapper_bootstrap_path: ../web/index.php
+zf1_wrapper:
+    bootstrap_path: ../web/index.php
 ```
 
 ### 2. routing.yml
