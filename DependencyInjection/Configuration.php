@@ -27,9 +27,14 @@ class Configuration implements ConfigurationInterface
             $rootNode = $treeBuilder->root('zf1_wrapper');
         }
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+            ->scalarNode('bootstrap_path')
+            ->info('Relative path to Zend Framework Bootstrap file kernel.root_dir')
+            ->isRequired()
+            ->cannotBeEmpty()
+            ->end()
+            ->end();
 
         return $treeBuilder;
     }
